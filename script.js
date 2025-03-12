@@ -9,7 +9,7 @@ function fetchCars() {
             cars = data;
             displayCars();
         })
-        .catch(error => console.error("Erreur lors du chargement des voitures :", error));
+        .catch(error => console.error("Erreur", error));
 }
 
 // Fonction pour afficher les voitures
