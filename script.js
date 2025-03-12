@@ -14,9 +14,9 @@ function displayCars() {
             <div class="car-card">
                 <img src="${car.image}" alt="${car.name}">
                 <h2>${car.name}</h2>
-                <p><strong>Prix:</strong> ${car.price}</p>
+                <p><strong>Prix:</strong> ${car.price}€</p>
                 <p><strong>Moteur:</strong> ${car.engine}</p>
-                <p><strong>Puissance:</strong> ${car.power}</p>
+                <p><strong>Puissance:</strong> ${car.power}ch</p>
             </div>
         `;
         carContainer.innerHTML += carCard;
@@ -32,9 +32,9 @@ function filterCars() {
                 <div class="car-card">
                     <img src="${car.image}" alt="${car.name}">
                     <h2>${car.name}</h2>
-                    <p><strong>Prix:</strong> ${car.price}</p>
+                    <p><strong>Prix:</strong> ${car.price}€</p>
                     <p><strong>Moteur:</strong> ${car.engine}</p>
-                    <p><strong>Puissance:</strong> ${car.power}</p>
+                    <p><strong>Puissance:</strong> ${car.power}ch</p>
                 </div>
             `;
             carContainer.innerHTML += carCard;
