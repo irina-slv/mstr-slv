@@ -40,6 +40,16 @@ function filterCars() {
             carContainer.innerHTML += carCard;
         });
 }
+let ascendingOrder = true;
+function sortCars(){
+    cars.sort((a,b) => {
+        let priceA = parseInt(a.price.replace("€","").replace("",""));
+        let priceB = parseInt(b.price.replace("€","").replace("",""));
+        return ascendingOrder ? priceA-priceB : priceB-priceA;
+    });
+    ascendingOrder =! ascendingOrder;
+    displayCars();
+}
 
 // Afficher les voitures au chargement
 displayCars();
