@@ -1,26 +1,25 @@
 services:
   mariadb:
     image: mariadb
-    environement:
-      _MARIADB_USER
-      _
-      _
+    environment:
+      - MYSQL_ROOT_PASSWORD=ROOTPassword
+      - MYSQL_DATABASE= voitures
+      - MYSQL_USER=irinaslv
+      - MYSQL_PASSWORD=irinaslv
     ports:
-      _3306:3306
+      - 3306:3306
   
   monapaache:
     image: irinaslv/monapache
     ports: 
-      _80:80
+      - 80:80
   
   phpmyadmin:
     image: phpmyadmin
     environment:
-      _PMA_HOST
+      - PMA_HOST=mariadb
     ports:
-      _80:80
+      - 80:80
 
   monubuntu:
-  image: irinaslv/monubuntu
-
-  docker compose up:
+    image: irinaslv/monubuntu
