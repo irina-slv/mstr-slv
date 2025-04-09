@@ -12,7 +12,7 @@ services:
   monapaache:
     image: irinaslv/monapache
     ports: 
-      - 80:80
+      - 81:81
   
   phpmyadmin:
     image: phpmyadmin
@@ -23,3 +23,4 @@ services:
 
   monubuntu:
     image: irinaslv/monubuntu
+
