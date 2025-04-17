@@ -18,13 +18,12 @@ services:
     ports: 
       - "8080:80"
 
-  
   phpmyadmin:
     image: phpmyadmin
     environment:
       - PMA_HOST=mariadb
     ports:
-      - 80:80
+      - "8081:80"  
 
   monubuntu:
     image: irinaslv/monubuntu
