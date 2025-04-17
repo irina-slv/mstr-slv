@@ -2,21 +2,22 @@ services:
   mariadb:
     image: mariadb
     environment:
-       - MYSQL_ROOT_PASSWORD=&{LOGIN_BD}
-      - MYSQL_DATABASE=&{PASS_BD}
-      - MYSQL_USER=&{NOM_BD}
-      - MYSQL_PASSWORD=&{PASS_ROOT_BD}
+      - MYSQL_ROOT_PASSWORD=${LOGIN_BD}
+      - MYSQL_DATABASE=${PASS_BD}
+      - MYSQL_USER=${NOM_BD}
+      - MYSQL_PASSWORD=${PASS_ROOT_BD}
     volumes:
       - ./db_data:/var/lib/mysql
     ports:
-      - 3306:3306
-  
+      - "3306:3306"
+
   monapaache:
     image: irinaslv/monapache
     volumes:
       - .:/var/www/html
     ports: 
-      - 80:80
+      - "8080:80"
+
   
   phpmyadmin:
     image: phpmyadmin
